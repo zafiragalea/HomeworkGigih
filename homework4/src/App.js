@@ -1,15 +1,16 @@
 import './App.css';
 import Button from "./components/Button";
+import { title,imageAlbum,artist } from './data';
 
 function App() {
+
   return (
     <div className="App">
       <div className="box">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/5_Seconds_of_Summer_-_Calm.png" />
+        <img src={imageAlbum} />
         <div>
-          <p>Red Dessert</p>
-          <p>5 Seconds of Summer</p>
-          <p>Calm</p>
+          <h5>{title}</h5>
+          <p>{artist}</p>
           <Button />
         </div>
       </div>
