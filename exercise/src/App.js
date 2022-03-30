@@ -3,11 +3,13 @@ import './App.css';
 // import { title , imageAlbum , artist } from './data.js';
 // import Gif from "./components/GIF";
 import React from 'react';
+import ReactDOM from 'react-dom';
 // import data from "./data.js";
 // import Music from "./components/Music";
 // import gifs from "./gifs";
-import dataMusic from "./components/Music/dataMusic";
+// import dataMusic from "./components/Music/dataMusic";
 // import data from './gifs';
+import ClassSample from "./Components/ClassSample";
 
 function App() {
 //   const gif = {
@@ -22,42 +24,46 @@ function App() {
 // console.log(filterRating);
 
   return (
+    <React.StrictMode>
+      <ClassSample />
+    </React.StrictMode>,
+    document.getElementById("root")
     
-    <div className="App">
-      {console.log(dataMusic)}
-      {/* {
-        filterRating.map((rating) => {
-          return <Gif url={rating.url} title={rating.title} />;
-         }) 
-      } */}
+    // <div className="App">
+    //   {console.log(dataMusic)}
+    //   {/* {
+    //     filterRating.map((rating) => {
+    //       return <Gif url={rating.url} title={rating.title} />;
+    //      }) 
+    //   } */}
          
-      <div className="box">
-         {/* <img src={imageAlbum} />
-         <div>
-           <h5>{title}</h5>
-           <p>{artist}</p>
-           <Button />
-         </div> */}
-        {
-          dataMusic.map((data)=>(
-            <React.Fragment key = {data.id}>
-              <dataMusic
-                url={data.album.images[0].url}
-                name={data.name}
-                artist={data.artists[0].name}
-                album={data.album.name}
-              />
-            </React.Fragment>
+    //   <div className="box">
+    //      {/* <img src={imageAlbum} />
+    //      <div>
+    //        <h5>{title}</h5>
+    //        <p>{artist}</p>
+    //        <Button />
+    //      </div> */}
+    //     {
+    //       dataMusic.map((data)=>(
+    //         <React.Fragment key = {data.id}>
+    //           <dataMusic
+    //             url={data.album.images[0].url}
+    //             name={data.name}
+    //             artist={data.artists[0].name}
+    //             album={data.album.name}
+    //           />
+    //         </React.Fragment>
             
-          ))
+    //       ))
         
-        }
-      </div>
+    //     }
+    //   </div>
 
-       {/* <div>
-         <Gif url={gif.url} title={gif.title} />
-       </div> */}
-     </div>
+    //    {/* <div>
+    //      <Gif url={gif.url} title={gif.title} />
+    //    </div> */}
+    //  </div>
   );
 }
 
